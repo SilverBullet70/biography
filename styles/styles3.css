@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Dancing Script'), local('DancingScript'), url(http://themes.googleusercontent.com/static/fonts/dancingscript/v3/DK0eTGXiZjN6yA8zAEyM2bDH3ri20rYH10B2w3wbVeU.woff) format('woff');
+}
+
+header {
+    background-color: #071952;
+    padding: 3%;
+    width: 94%;
+    height: 5%;
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to top,
+            #35A29F 0%,
+            #35A29F 50%,
+            #088395 50%,
+            #088395 100%);
+}
+
+.Card {
+    border-radius: 25px;
+    background: #F2F7A1;
+    padding: 20px;
+    flex-wrap: wrap;
+    min-width: 400px;
+    min-height: 400px;
+}
+
+#profile {
+    height:  400px;
+    object-fit: contain;
+
+
+}
+
+#frame {
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+
+.scrollh {
+    display: flex;
+    overflow-x: scroll;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    width: auto;
+    gap: 20px;
+    height: 100%;
+    padding-bottom: 10px;
+
+    box-shadow: 15px 10px 20px -15px #000000;
+    padding-left: 10px;
+
+}
+
+#container {
+    display: flex;
+    gap: 10px;
+}
+
+main {
+    margin: 5%;
+}
+
+html {
+    overflow: hidden;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    
+}
+
+footer>p {
+    display: inline;
+    color: aliceblue;
+    font-family: 'Dancing Script';
+    font-weight: 300;
+    font-size: 200%;
+}
+
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin: 0px;
+    font-family: 'Dancing Script';
+    font-weight: 400;
+    font-size: 3em;
+}
+
+h2 {
+    color: #071952;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 200;
+}
+
+p,
+li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #071952;
+    font-size: 140%;
+}
+
+a{
+    color: rgb(82, 82, 216);
+}
+
+a:visited {
+    color: #1e6e7a;
+}
+
+
+a:hover {
+    color: rgb(89, 12, 12);
+}
+
+a:active {
+    color: aliceblue;
+}
+
+::-webkit-scrollbar {
+    scroll-padding: 50px 0 0 50px;
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #088395;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #1e6e7a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #071952;
+
+}
+
+.Card:hover {
+
+    background-color: #F2F7A1;
+    animation-name: stretch;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.95);
+    }
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 799px) and (orientation: portrait) {
+    
+
+    .scrollh,
+    #container {
+        display: grid;
+        align-items: center;
+        box-shadow: none;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    #container{
+        grid-template-rows: auto auto;
+        align-items: center;
+    }
+    .scrollh{
+        grid-template-columns: auto auto;
+    }
+
+    body {
+        overflow-y: scroll;
+        align-items: center;
+    }
+   
+    #frame{
+        width: fit-content;
+        margin: auto;
+    }
+
+    .Card {
+        min-width: 250px;
+        min-height: 90%;
+        margin: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
+
+    .scrollh,
+    #container {
+        display: block;
+        align-items: center;
+        box-shadow: none;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .scrollh{
+        margin: auto;
+    }
+
+    body {
+        overflow-y: scroll;
+        align-items: center;
+    }
+
+    .Card {
+        min-width: fit-content;
+        min-height: fit-content;
+        max-width: 500px;
+        margin: 5%;
+    }
+    
+    #frame{
+        width: fit-content;
+        margin: auto;
+    }
+
+    main {
+        width: auto;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+}
+
+
+@media screen and (orientation: landscape) {
+    .Card {
+        max-width: 100px;
+        width: 10%;    }
+}
