@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+
+    <style>
+        .Grid1 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            background-color: aquamarine;
+            gap: 10px;
+            justify-content: space-evenly;
+            
+        }
+
+        .Grid2 {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            background-color: coral;
+            gap: 10px;
+            justify-content: space-evenly;
+
+        }
+
+        .Grid1 > div, .Grid2 > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            padding: 20px;
+        }
+        
+
+        @media screen and (max-width: 900px){
+            .Grid1 {
+                grid-template-columns:  auto auto;
+            }
+            .Grid2 {
+                grid-template-columns: 50px ;
+            }
+        }
+
+        @media screen and (max-width: 400px){
+            .Grid1 {
+                grid-template-columns:  auto;
+            }
+            .Grid2 {
+                grid-template-columns: 50px ;
+            }
+        }
+
+
+      
+    </style>
+</head>
+<body>
+    <div class="Grid1">
+        <div>
+            Academic
+        </div>
+        <div>
+            College
+        </div>
+        <div>
+            Student
+        </div>
+        <div>
+            News
+        </div>
+    </div>
+
+    <div class="Grid2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+    </div>
+</body>
+</html>

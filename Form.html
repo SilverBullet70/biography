@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        h1 {
+            color: brown;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: italic;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        form
+        {
+            width: fit-content;
+            margin: auto;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #textInput,
+        .gender,
+        .select,
+        .checkbox,
+        .submit{
+            
+            margin-bottom: 40px;
+            
+        }
+        label{
+            margin: 10px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        body{
+            align-items: center;
+        }
+
+     
+    </style>
+
+</head>
+
+<body>
+    <h1>
+        This page developped by Angela Salem 202108866
+    </h1>
+    <form action="">
+        <table id="textInput">
+            <tr>
+                <td>
+                    <label>First Name</label>
+                </td>
+                <td>: <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Last Name</label>
+                </td>
+                <td>: <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>DOB</label>
+                </td>
+                <td>: <input type="date"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>E-mail</label>
+                </td>
+                <td>: <input type="email"></td>
+            </tr>
+
+        </table>
+        <div class="gender" id="centered_div">
+
+            <input type="radio" name="Gender" value="Male"> <label>Male</label>
+            <br>
+            <input type="radio" name="Gender" value="Female"><label>Female</label>
+            <br>
+        </div>
+
+        <div class="select"> <label>City : </label><select name="cities">
+                <option value="Jerusalem">Jerusalem</option>
+                <option value="Bthlehem">Bethlehem</option>
+                <option value="Rammallah">Rammallah</option>
+                <option value="Madrid">Madrid</option>
+            </select>
+
+            <br>
+
+            <label>Faculty : </label><select name="faculties">
+                <option value="s">science</option>
+                <option value="n">nursing</option>
+                <option value="m">business</option>
+                <option value="e">educatiob</option>
+            </select>
+        </div>
+
+
+        <div class="checkbox">
+
+            <input type="checkbox" name="bike"> <label> I can come by bike</label> <br>
+            <input type="checkbox" name="car"><label> I can come by car</label><br>
+            <input type="checkbox" name="bus"><label>I can come by bus</label><br>
+            <input type="checkbox" name="train"><label>I can come by train</label><br>
+
+        </div>
+
+        <input class="submit" type="submit" value="submit">
+
+    </form>
+</body>
+
+</html>
